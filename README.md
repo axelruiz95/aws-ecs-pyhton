@@ -41,23 +41,22 @@ docker build -t backend-cv .
 
 ### 2. Crear repositorio en ECR y subir imagen
 
-aws ecr create-repository --repository-name task-proyecto
-aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 891377197834.dkr.ecr.us-east-1.amazonaws.com
-docker tag backend-cv:latest 891377197834.dkr.ecr.us-east-1.amazonaws.com/task-proyecto:latest
-docker push 891377197834.dkr.ecr.us-east-1.amazonaws.com/task-proyecto:latest
-Nota: Para automatizar procesos posteriores, asegúrate de siempre usar la URL de imagen:
-891377197834.dkr.ecr.us-east-1.amazonaws.com/task-proyecto:latest
+- aws ecr create-repository --repository-name task-proyecto
+- aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 891377197834.dkr.ecr.us-east-1.amazonaws.com
+- docker tag backend-cv:latest 891377197834.dkr.ecr.us-east-1.amazonaws.com/task-proyecto:latest
+- docker push 891377197834.dkr.ecr.us-east-1.amazonaws.com/task-proyecto:latest
+- Nota: Para automatizar procesos posteriores, asegúrate de siempre usar la URL de imagen:
+- 891377197834.dkr.ecr.us-east-1.amazonaws.com/task-proyecto:latest
 
 ### 🛠️ 3. Crear infraestructura en AWS
 
 🔹 **ECS Cluster y Service
-- **Python 3.11+**
 - **Crear un Cluster ECS tipo Fargate ($ECS_CLUSTER)**
-- **Crear una Task Definition que use tu imagen desde Amazon ECR
-- **Crear un Service ECS ($ECS_SERVICE) y conectarlo a un Application Load Balancer (ALB):
--  **Configurar el ALB para enrutar tráfico HTTP al puerto 8000 del contenedor
--  **Asegurar que el Service ECS tenga asignado un Security Group adecuado
--  **Activar auto-assign public IP si usas subnets públicas
+- **Crear una Task Definition que use tu imagen desde Amazon ECR**
+- **Crear un Service ECS ($ECS_SERVICE) y conectarlo a un Application Load Balancer (ALB):**
+- **Configurar el ALB para enrutar tráfico HTTP al puerto 8000 del contenedor**
+- **Asegurar que el Service ECS tenga asignado un Security Group adecuado**
+- **Activar auto-assign public IP si usas subnets públicas**
 
 
 
