@@ -1,5 +1,5 @@
 {
-    "_comment": "Para automatizar coloca '891377197834.dkr.ecr.us-east-1.amazonaws.com/task-proyecto:latest' en vez del número de imagen",
+    "_comment": "Para automatizar coloca '12345681.dkr.ecr.us-east-1.amazonaws.com/task-proyecto:latest' en vez del número de imagen",
     "family": "task-proyecto",
 
     "containerDefinitions": [

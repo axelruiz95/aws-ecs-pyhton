@@ -42,11 +42,11 @@ docker build -t backend-cv .
 ### 2. Crear repositorio en ECR y subir imagen
 
 - aws ecr create-repository --repository-name task-proyecto
-- aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 891377197834.dkr.ecr.us-east-1.amazonaws.com
-- docker tag backend-cv:latest 891377197834.dkr.ecr.us-east-1.amazonaws.com/task-proyecto:latest
-- docker push 891377197834.dkr.ecr.us-east-1.amazonaws.com/task-proyecto:latest
+- aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 12345681.dkr.ecr.us-east-1.amazonaws.com
+- docker tag backend-cv:latest 12345681.dkr.ecr.us-east-1.amazonaws.com/task-proyecto:latest
+- docker push 12345681.dkr.ecr.us-east-1.amazonaws.com/task-proyecto:latest
 - Nota: Para automatizar procesos posteriores, asegúrate de siempre usar la URL de imagen:
-- 891377197834.dkr.ecr.us-east-1.amazonaws.com/task-proyecto:latest
+- 12345681.dkr.ecr.us-east-1.amazonaws.com/task-proyecto:latest
 
 ### 🛠️ 3. Crear infraestructura en AWS
 
