@@ -37,13 +37,10 @@ backend-cv/
 
 ### 1. Construir y etiquetar la imagen Docker
 
-```bash
 docker build -t backend-cv .
 
 ### 2. Crear repositorio en ECR y subir imagen
-bash
-Copiar
-Editar
+
 aws ecr create-repository --repository-name task-proyecto
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 891377197834.dkr.ecr.us-east-1.amazonaws.com
 docker tag backend-cv:latest 891377197834.dkr.ecr.us-east-1.amazonaws.com/task-proyecto:latest
