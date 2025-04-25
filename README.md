@@ -51,6 +51,7 @@ Nota: Para automatizar procesos posteriores, asegúrate de siempre usar la URL d
 ### 🛠️ 3. Crear infraestructura en AWS
 
 🔹 **ECS Cluster y Service
+- **Python 3.11+**
 -     **Crear un Cluster ECS tipo Fargate ($ECS_CLUSTER)**
 -     **Crear una Task Definition que use tu imagen desde Amazon ECR
 -     **Crear un Service ECS ($ECS_SERVICE) y conectarlo a un Application Load Balancer (ALB):
