@@ -51,12 +51,12 @@ Nota: Para automatizar procesos posteriores, asegúrate de siempre usar la URL d
 🛠️ 3. Crear infraestructura en AWS
 
 🔹 **ECS Cluster y Service
-    **Crear un Cluster ECS tipo Fargate ($ECS_CLUSTER)
-    **Crear una Task Definition que use tu imagen desde Amazon ECR
-    **Crear un Service ECS ($ECS_SERVICE) y conectarlo a un Application Load Balancer (ALB):
-        **Configurar el ALB para enrutar tráfico HTTP al puerto 8000 del contenedor
-        **Asegurar que el Service ECS tenga asignado un Security Group adecuado
-        **Activar auto-assign public IP si usas subnets públicas
+-     **Crear un Cluster ECS tipo Fargate ($ECS_CLUSTER)
+-     **Crear una Task Definition que use tu imagen desde Amazon ECR
+-     **Crear un Service ECS ($ECS_SERVICE) y conectarlo a un Application Load Balancer (ALB):
+-         **Configurar el ALB para enrutar tráfico HTTP al puerto 8000 del contenedor
+-         **Asegurar que el Service ECS tenga asignado un Security Group adecuado
+-         **Activar auto-assign public IP si usas subnets públicas
 
 
 
